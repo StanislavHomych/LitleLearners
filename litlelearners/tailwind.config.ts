@@ -26,6 +26,22 @@ export default {
         "grey-40": "var(--grey-40)",
         "orange-75": "var(--orange-75)",
       },
+      fontSize: {
+        xss: "12px",
+        xs: "18px",
+        sm: "20px",
+        base: "22px",
+        lg: "28px",
+        xl: "44px",
+        "2xl": "54px",
+        "3xl": "58px",
+      },
+      boxShadow: {
+        orangeFull: "7px 7px 0px #ff9e66",
+      },
+      screens: {
+        xl2: "1400px",
+      },
     },
   },
   plugins: [],
