@@ -34,7 +34,7 @@ export default function RootLayout({
           <div className="px-[50px]">
             <Navigation />
           </div>
-          <div className="px-[160px]">
+          <div className="px-[50px] md:px-[70px] lg-[160px]">
             {children}
           </div>
         </Providers>
