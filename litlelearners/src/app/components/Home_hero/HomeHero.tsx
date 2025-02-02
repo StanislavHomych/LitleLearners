@@ -9,9 +9,9 @@ import Image from "next/image";
 const HomeHero: React.FC = () => {
     return (
         <div className="pt-[50px] flex flex-col items-center lg:flex-row">
-            <div className="order-2 lg:order-1 w-full lg:w-3/5 sm:w-full lg:pr-8 flex flex-col justify-center">
+            <div className=" w-full lg:w-3/5 sm:w-full lg:pr-8 flex flex-col justify-center">
                 <motion.h3
-                    className="underline text-xs sm:text-base  font-medium sm:mt-4"
+                    className="underline text-xs sm:text-base  font-medium mt-4"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ duration: 1 }}
@@ -57,30 +57,33 @@ const HomeHero: React.FC = () => {
                     </div>
                 </motion.div>
             </div>
+            <motion.div
+                initial={{ opacity: 0, x: 0 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 1.5, delay: 0.3 }}
+                className='mt-8 lg:mt-0 w-full sm:w-3/5  lg:w-2/5 flex justify-center items-center bg-orange-75 rounded-sm max-w-[600px] p-[5px] relative '
+            >
+                <div >
+                    <div className='border border-gray-950'>
+                        <div className='w-[20px]  absolute top-[-5px] left-[-5px] '>
+                            <div className='before:block before:w-[20px] before:h-[20px] before:border before:border-gray-950 before:bg-white before:rounded-full'></div>
+                        </div>
+                        <div className='w-[20px]  absolute top-[-5px] right-[-5px] '>
+                            <div className='before:block before:w-[20px] before:h-[20px] before:border before:border-gray-950 before:bg-white before:rounded-full'></div>
+                        </div>
+                        <div className='w-[20px]  absolute bottom-[-5px] left-[-5px] '>
+                            <div className='before:block before:w-[20px] before:h-[20px] before:border before:border-gray-950 before:bg-white before:rounded-full'></div>
+                        </div>
+                        <div className='w-[20px]  absolute bottom-[-5px] right-[-5px] '>
+                            <div className='before:block before:w-[20px] before:h-[20px] before:border before:border-gray-950 before:bg-white before:rounded-full'></div>
+                        </div>
 
-            <div className="order-1  lg:order-2 w-full sm:w-3/5  lg:w-2/5 flex justify-center items-center bg-orange-75 rounded-sm max-w-[600px] p-[5px] relative ">
-                <div className='border border-gray-950'>
-                    <div className='w-[20px]  absolute top-[-5px] left-[-5px] '>
-                        <div className='before:block before:w-[20px] before:h-[20px] before:border before:border-gray-950 before:bg-white before:rounded-full'></div>
-                    </div>
-                    <div className='w-[20px]  absolute top-[-5px] right-[-5px] '>
-                        <div className='before:block before:w-[20px] before:h-[20px] before:border before:border-gray-950 before:bg-white before:rounded-full'></div>
-                    </div>
-                    <div className='w-[20px]  absolute bottom-[-5px] left-[-5px] '>
-                        <div className='before:block before:w-[20px] before:h-[20px] before:border before:border-gray-950 before:bg-white before:rounded-full'></div>
-                    </div>
-                    <div className='w-[20px]  absolute bottom-[-5px] right-[-5px] '>
-                        <div className='before:block before:w-[20px] before:h-[20px] before:border before:border-gray-950 before:bg-white before:rounded-full'></div>
-                    </div>
-                    <motion.div
-                        initial={{ opacity: 0, x: 0 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 1.5, delay: 0.3 }}
-                    >
                         <Image src="/assets/images/Hero.png" alt="hero" width={400} height={400} className="w-full rounded-sm " />
-                    </motion.div>
+                    </div>
+
                 </div>
-            </div>
+            </motion.div>
+
         </div>
     );
 };

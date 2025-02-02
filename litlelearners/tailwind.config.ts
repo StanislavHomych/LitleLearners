@@ -38,6 +38,7 @@ export default {
       },
       boxShadow: {
         orangeFull: "7px 7px 0px #ff9e66",
+        blackFull: "7px 7px 0px #000",
       },
       screens: {
         xl2: "1400px",
