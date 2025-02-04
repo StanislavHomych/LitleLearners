@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import "swiper/css/navigation";
 
 :root {
   --background: #ffefe5;
@@ -25,7 +26,7 @@
     --grey-30: #4c4c4d;
     --orange-95: #ffefe5;
     --grey-40: #656567;
-    --orange-75: #FFAE80;
+    --orange-75: #ffae80;
   }
 }
 
@@ -33,4 +34,52 @@ body {
   color: var(--fontmain);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* SWIPER STYLES */
+.mySwiper2 {
+  cursor: grab;
+}
+
+.mySwiper2:active {
+  cursor: grabbing;
+}
+
+.carousel-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.carousel-slide {
+  width: 80%;
+  max-width: 350px;
+}
+
+.carousel-container::before,
+.carousel-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 30px;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.carousel-container::before {
+  left: 0;
+  background: linear-gradient(to right, #ffefe5, transparent);
+}
+
+.carousel-container::after {
+  right: 0;
+  background: linear-gradient(to left, #ffefe5, transparent);
+}
+
+@media (max-width: 510px) {
+  .carousel-container::before,
+  .carousel-container::after {
+    display: none;
+  }
 }
